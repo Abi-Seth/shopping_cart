@@ -47,9 +47,11 @@ export class CartComponent implements OnInit {
   }
 
   calTotalPrice() {
+    this.cartService.calNumberOfItems();
+
     let cost = 0;
     for(let i = 0; i < this.cartService.itemsInCart.length; i++) {
-      cost = cost+(parseInt(this.cartService.itemsInCart[i].price.split("").slice(0, this.cartService.itemsInCart[i].price.split("").length-2).join(""))*this.cartService.itemQuantities[i]);
+      cost = cost+(parseFloat([...this.cartService.itemsInCart[i].price.slice(0, this.cartService.itemsInCart[i].price.length-2), '.', ...this.cartService.itemsInCart[i].price.slice(this.cartService.itemsInCart[i].price.length-2, this.cartService.itemsInCart[i].price.length)].join(""))*this.cartService.itemQuantities[i]);
     }
 
     this.total = cost;

@@ -19,12 +19,16 @@ export class ProductCardComponent implements OnInit {
 
 
   async addItemToCart(product: any) {
-
+    let newProduct = {
+      quantity: 1,
+      item: product
+    }
     if (this.cartService.itemsInCart.includes(product)) {
       alert("Item already added to cart!")
     } else {
       this.cartService.itemsInCart.push(product);
       this.cartService.itemQuantities.push(1);
+      this.cartService.calNumberOfItems();
     }
   }
 }

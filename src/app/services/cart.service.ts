@@ -35,8 +35,9 @@ export class CartService {
   itemsInCart: any[] = [];
   itemQuantities: number[] = [];
 
-  public getTotalPrice() {
-    
-  }
+  noItems: number = 0
 
+  calNumberOfItems() {
+    this.noItems = this.itemQuantities.reduce((sum, a) => sum+a, 0)
+  }
 }
