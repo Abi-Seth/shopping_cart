@@ -1,0 +1,10 @@
+#entire_footer__component {
+    height: 9vh;  
+}
+
+span {
+    font-family: var(--poppins);
+    font-size: 0.8em;
+    color: var(--pureWhite);
+    opacity: 0.7;
+}

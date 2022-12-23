@@ -1,0 +1,41 @@
+#entire_application__products_component {
+    height: auto;
+    margin-top: 2.5em;
+    display: flex;
+}
+
+.products_cards {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--poppins);
+    justify-content: space-between;
+    margin: auto;
+}
+
+.products_cards .product {
+    width: 24.5%;
+    /* height: 75vh; */
+    height: auto;
+    margin-bottom: 0.6em;
+    border-radius: 0.3em;
+    /* background: var(--dimWhite); */
+}
+
+h2 {
+    color: var(--pureWhite);
+    margin-bottom: 0.8%;
+    opacity: 0.8;
+    font-size: 1.7em;
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    color: var(--pureWhite);
+    margin-bottom: 2%;
+    opacity: 0.3;
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+}

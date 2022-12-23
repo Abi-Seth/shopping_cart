@@ -1,0 +1,128 @@
+/* #product_card {
+    width: 89%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--poppins); */
+    /* justify-content: space-between; */
+/* } */
+
+#product_card .product {
+    width: 100%;
+    height: 55vh;
+    margin-bottom: 0.6em;
+    border-radius: 0.3em;
+    margin-top: 1.5em;
+    color: var(--pureWhite);
+}
+
+.image_design {
+    width: 95%;
+    height: 50%;
+    margin-top: 2% !important;
+    border-radius: 0.3em;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    /* background: #eeeefb; */
+}
+
+.image_descript {
+    width: 95%;
+    height: 50%;
+    padding: 0.8em 0;
+    margin: auto;
+    position: relative;
+    /* background: var(--dimWhite); */
+}
+
+.image_design {
+    overflow: hidden;
+}
+
+.image_design>img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.image_descript>p {
+    font-size: 0.83em;
+    font-weight: 500;
+    /* position: absolute; */
+    top: 7%;
+    opacity: 0.8;
+    cursor: pointer;
+    margin-bottom: 1em;
+    height: 60px;
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+.image_descript>h3 {
+    font-size: 0.88em;
+    font-weight: 600;
+    /* position: absolute; */
+    top: 32%;
+    opacity: 0.6;
+}
+
+.image_descript>h2 {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.image_descript>h3>span {
+    font-size: 0.7em;
+    opacity: 0.6;
+}
+
+.image_descript>a {
+    font-size: 0.85em;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0.5em;
+    width: 99%;
+    padding: 0.7em 0;
+    border-radius: 0.3em;
+    background: #ff373425;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mainOrange);
+    border: 0.1em solid var(--mainOrange);
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.image_descript>a:hover {
+    background: var(--mainOrange);
+    color: var(--pureWhite);
+}
+
+.image_descript>a svg {
+    fill: var(--mainOrange) !important;
+}
+
+.image_descript>a:hover svg {
+    fill: var(--pureWhite);
+}
+
+.already_in_cart {
+    color: var(--mainGreen) !important;
+    border: 0.1em solid var(--mainGreen) !important;
+    background: var(--dimGreen) !important;
+}
+
+.already_in_cart:hover {
+    background: var(--mainGreen) !important;
+    color: var(--pureWhite) !important;
+}
+

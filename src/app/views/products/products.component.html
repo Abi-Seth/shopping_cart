@@ -1,0 +1,11 @@
+<div id="entire_application__products_component _flex_centered">
+    <div class="products_details_description">
+        <h2>Google Shopping</h2>
+        <p>Products brought to your door step!</p>
+    </div>
+    <div class="products_cards">
+        <div *ngFor="let product of cartService.products; let i = index" class="product">
+            <app-product-card [item]="product"></app-product-card>
+        </div>
+    </div>
+</div>

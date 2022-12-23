@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+/** global styling **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/** global variables **/
+:root {
+    /** colors **/
+    --pureWhite: #ffffff;
+    --mainBlack: #010101;
+    --dimBlack: #020b1bc4;
+    --dimerBlack: rgb(31, 30, 36);
+    --minorBlack: #1f1e24;
+    --minorTwoBlack: #1f1e24d7;
+    --tableBack: #18181dd8;
+    --mainBlue: #1147ac;
+    --mainOrange: #FF3834;
+    --mainGreen: rgb(13 148 136);
+    --dimGreen: rgb(20 184 166);
+    --linkBack: #1128ac18;
+    --linkColor: #1128ac;
+
+    /** fonts **/
+    --poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, var(--mainBlack), var(--dimerBlack));
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 0.6em !important;
+    background: transparent !important;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 0.6em !important;
+    background: var(--dimBlack) !important;
+    border-radius: 0.15em !important;
+}
+
+p, h2, h1, input {
+    font-family: var(--poppins);
+}
+
+._w_full {
+    width: 100%;
+}
+
+._h_full {
+    height: 100%;
+}
+
+._flex_centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._flex_start {
+    justify-content: flex-start !important;
+}
+
+button {
+    font-family: var(--poppins);
+    font-weight: 500;
+    letter-spacing: .01em;
+    border: none;
+    cursor: pointer;
+}

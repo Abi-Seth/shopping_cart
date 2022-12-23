@@ -1,0 +1,50 @@
+<div id="entire_application__products_component">
+    <div class="cart_details_description">
+        <h2>Shopping Cart</h2>
+        <p>Products brought to your door step!</p>
+    </div>
+    <div class="products_in_cart">
+        <div class="table_container">
+            <div class="summary">
+                <span>TOTAL PRICE: $ {{ total | number}}.00</span>
+                <button (click)="removeAllItems()">Checkout Items</button>
+            </div>
+            <table *ngIf="cartService.itemsInCart.length > 0" class="_w_full">
+                <thead>
+                    <tr>
+                        <th class="list_num _flex_centered">#</th>
+                        <th class="_flex_start col_3">Name</th>
+                        <th class="_flex_start col_3">Price</th>
+                        <th class="_flex_start list_num col_3">Add</th>
+                        <th class="_flex_start list_num col_3">Quantity</th>
+                        <th class="_flex_start list_num col_3">Reduce</th>
+                        <th class="_flex_start list_num col_3">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cartService.itemsInCart; let i = index">
+                        <td class="list_num">{{ i+1 }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.price * cartService.itemQuantities[i] | price }}</td>
+                        <td class="list_num">
+                            <span (click)="addItems(i)">+</span>
+                        </td>
+                        <td class="list_num">{{ cartService.itemQuantities[i] }}</td>
+                        <td class="list_num">
+                            <span (click)="removeItems(i)">-</span>
+                        </td>
+                        <td class="list_num">
+                            <p style="cursor: pointer" (click)="removeItem(i)">Remove</p>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <div *ngIf="cartService.itemsInCart.length <= 0" class="no_products _flex_centered">
+                <span class="_flex_centered _h_full">
+                    <p>Oops! No products in your cart</p>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
